@@ -10,8 +10,8 @@ next_class_id = 1
 
 type_defs = gql("""
     type Query {
-        students: [Student]
-        classes: [Class]
+        students (id: Int): [Student]
+        classes (id: Int): [Class]
     }
     type Mutation {
         create_student (name: String!): Student
@@ -34,12 +34,18 @@ query = QueryType()
 
 
 @query.field("students")
-def resolve_students(obj, _):
+def resolve_students(_, info, id=None):
+    if id:
+        print(students[id])
+        return [students[id]]
     return students.values()
 
 
 @query.field("classes")
-def resolve_classes(obj, _):
+def resolve_classes(_, info, id=None):
+    if id:
+        print(classes[id])
+        return [classes[id]]
     return classes.values()
 
 
