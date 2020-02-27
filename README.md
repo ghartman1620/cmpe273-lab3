@@ -1,8 +1,8 @@
 Gabriel Hartman CMPE273 Lab 3
 
-#GraphQL Queries that were implemented:
+# GraphQL Queries that were implemented:
 
-##Create a new student
+## Create a new student
 
     mutation {
         create_student(name: "Gabe") {
@@ -15,7 +15,7 @@ Gabriel Hartman CMPE273 Lab 3
         }
     }
 
-##Get all students
+## Get all students
 
     {
         student {
@@ -28,7 +28,7 @@ Gabriel Hartman CMPE273 Lab 3
         }
     }
 
-##Get a specific student and their classes
+## Get a specific student and their classes
 
     {
         students (id:1) {
@@ -41,7 +41,7 @@ Gabriel Hartman CMPE273 Lab 3
         }
     }
 
-##Get all classes and their students
+## Get all classes and their students
 
     {
         classes {
@@ -54,7 +54,7 @@ Gabriel Hartman CMPE273 Lab 3
         }
     }
 
-##Get a specific class and its students
+## Get a specific class and its students
 
     {
         classes(id:1) {
@@ -67,7 +67,7 @@ Gabriel Hartman CMPE273 Lab 3
         }
     }
 
-#Mutations
+# Mutations
 
 ## Create a new student
 
